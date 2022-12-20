@@ -2,7 +2,7 @@
 
 Install [pnpm](https://pnpm.io/).
 
-We recommend an LTS version of Node.js >= 16.
+We recommend an LTS version of [Node.js](https://nodejs.org/en/) >= 16.
 
 # Local Development
 
@@ -32,7 +32,7 @@ To deploy the `@myorg/core` app, from the root,
 
 2. Run `pnpm --filter "@myorg/core" run preview` to preview the app.
 
-In production, please see [`myorg/server`](https://github.myorg.org/myorg/myorg-server).
+In production, please see [`myorg/server`](https://github.myorg.com/myorg/myorg-server).
 
 # Tooling
 
@@ -60,13 +60,13 @@ To add a library, run `pnpm new-library` or `pnpm new-library-ts` (TypeScript).
 
 ## How should I create a branch for my new code?
 
-The `master` branch is the production code.
+The `main` branch is the production code.
 
-Each package has a branch called `next-<package>`, e.g. `next-results`. This is an eternal branch with the new code for `<package>`.
+Each package has a branch called `next-<package>`, e.g. `next-shared`. This is an eternal branch with the new code for `<package>`.
 
 To create an update, branch `feature/*` from `next-<package>` and merge back into `next-<package>` to commit your work.
 
-UAT branches are available, and should be named `uat-<package>` to provide UAT (staging) deployments.
+UAT branches are available, and should be named `uat-<package>` to provide a deployment in the staging environment.
 
 ## How do I preview my new code?
 
@@ -92,7 +92,7 @@ Please see our [Storybook](https://storybook.myorg.com) to see the docs and lear
 
 `@myorg/shared`: Shared code between all MyOrg packages
 
-`@myorg/<app>-ui`: Packages with this name format are UI libraries built for specific apps but can still be used by other apps, e.g. `@myorg/results-ui` may provide useful UI for your project!
+`@myorg/<app>-ui`: Packages with this name format are UI libraries built for specific apps but can still be used by other apps, e.g. `@myorg/dashboard-ui` was built for the Dashboard portal but may provide useful UI for your project
 
 ## How do I version, tag, release, or publish a new version of a package?
 
@@ -100,7 +100,7 @@ We handle this with the `changesets` CLI tool.
 
 A developer creates a changeset, which is just a changelog for the package being updated. Then they'll version it, and if required, release it to a registry.
 
-1. Ensure you are on a `next-<package>` branch. Merge `master` in
+1. Ensure you are on a `next-<package>` branch. Merge `main` in
 2. Run `pnpm changeset-create` to write your changelog (use spacebar to pick packages)
 3. Run `pnpm changeset-save-prerelease <tag-suffix>` **only** if you want to create a specific prerelease version. For example, `pnpm changeset-save-prerelease rc` creates `@myorg/package@1.7.3-rc.0`
 4. To create the new version, run `pnpm changeset-save`
