@@ -10,7 +10,7 @@
     "test": "vitest",
     "clean": "turbo run clean && rm -rf node_modules",
     "prepare": "husky install",
-    "lint-staged": "lint-staged",
+    "lint-staged": "pnpm --recursive --workspace-concurrency=1 exec lint-staged",
     "new-app": "pnpm exec plop app",
     "new-app-ts": "pnpm exec plop app-ts",
     "new-library": "pnpm exec plop library",
@@ -21,7 +21,7 @@
     "changeset-save-prerelease": "pnpm exec changeset pre enter",
     "changeset-save": "pnpm exec changeset version",
     "changeset-tag": "pnpm exec changeset tag",
-    "changeset-tag-and-publish": "echo 'Not yet supported' && exit && pnpm exec changeset publish"
+    "changeset-tag-and-publish": "pnpm exec changeset publish"
   },
   "keywords": [],
   "author": "Aaron Agarunov",
@@ -32,7 +32,7 @@
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.17",
     "@mui/styles": "^5.11.0",
-    "@vitejs/plugin-react": "^3.0.0",
+    "@vitejs/plugin-react-swc": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",
@@ -56,14 +56,8 @@
     "vitest": "^0.25.8"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "./node_modules/.bin/eslint --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0",
-      "git add"
-    ],
-    "**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql}": [
-      "./node_modules/.bin/prettier --write",
-      "git add"
-    ]
+    "**/*.{js,jsx,ts,tsx}": "eslint --ext .js,.jsx,.ts,.tsx --fix --max-warnings=0",
+    "**/*.{js,jsx,json,yml,yaml,css,less,scss,ts,tsx,md,graphql}": "prettier --write"
   },
   "packageManager": "pnpm@7.18.2"
 }
