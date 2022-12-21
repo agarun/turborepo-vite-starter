@@ -1,0 +1,39 @@
+{
+  "name": "@myorg/docs",
+  "private": true,
+  "author": "Aaron Agarunov",
+  "version": "1.0.0",
+  "scripts": {
+    "docs": "storybook dev -p 6006",
+    "build-docs": "storybook build --docs",
+    "preview-storybook": "serve storybook-static",
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
+  "dependencies": {
+    "@myorg/shared": "workspace:*",
+    "@myorg/shell": "workspace:*",
+    "@storybook/addon-essentials": "^7.0.0-beta.13",
+    "@storybook/manager-api": "^7.0.0-beta.13",
+    "@storybook/theming": "^7.0.0-beta.13"
+  },
+  "devDependencies": {
+    "@storybook/react": "^7.0.0-beta.13",
+    "@storybook/react-vite": "^7.0.0-beta.13",
+    "eslint-config-myorg": "workspace:*",
+    "storybook": "^7.0.0-beta.13"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "5.x",
+    "@mui/material": "5.x",
+    "@mui/styles": "5.x",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@vitejs/plugin-react": "3.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "react-router-dom": "5.x",
+    "typescript": "4.x",
+    "vite": "4.x"
+  }
+}
