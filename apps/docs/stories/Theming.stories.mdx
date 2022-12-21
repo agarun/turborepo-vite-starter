@@ -1,0 +1,116 @@
+import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
+import { theme } from '@myorg/shared';
+import { Baseline } from '@myorg/shell';
+
+<Meta title="Theming" />
+
+Let's review how to use our theme when styling components, and what's available in our theme.
+
+# Styling
+
+We support all styling methods provided by MUI.
+
+## `sx` prop
+
+With MUI version 5 and higher, [we can use the `sx` prop](https://mui.com/system/getting-started/the-sx-prop/):
+
+```jsx
+import { Box, Typography } from '@mui/material';
+
+const styles = {
+  body: theme => ({
+    marginTop: theme.spacing(1),
+    wordBreak: 'break-all'
+  })
+};
+
+function Dashboard() {
+  return (
+    <Box sx={{ color: 'text.primary' }}>
+      <Typography variant="body1" sx={styles.body}>
+        Welcome!
+      </Typography>
+    </Box>
+  );
+}
+```
+
+## Legacy `makeStyles`
+
+Before MUI version 5, [we used the `makeStyles` hook API](https://mui.com/system/styles/basics/#hook-api):
+
+```js
+import { makeStyles } from '@mui/styles';
+
+export const useStyles = makeStyles(theme => ({
+  main: {
+    background: theme.palette.secondary.main
+  }
+}));
+```
+
+## Using `theme` directly
+
+To use `theme` with a different styling option, we can import from `@myorg/shared`:
+
+```jsx
+import { theme } from '@myorg/shared';
+
+function Dashboard() {
+  return <div style={{ margin: theme.spacing(2) }}>Welcome!</div>;
+}
+```
+
+# Theme Tokens
+
+We extend the [MUI default theme](https://mui.com/material-ui/customization/default-theme/).
+
+## Colors
+
+<ColorPalette>
+  {[
+    'text',
+    'primary',
+    'secondary',
+    'error',
+    'warning',
+    'info',
+    'success',
+    'action',
+    'grey',
+    'background',
+    'common'
+  ].map(key => {
+    return (
+      <ColorItem
+        key={key}
+        title={`theme.palette.${key}`}
+        subtitle={
+          <>
+            <code>{key}</code> colors
+          </>
+        }
+        colors={theme.palette[key]}
+      />
+    );
+  })}
+</ColorPalette>
+
+## Brand Colors
+
+<ColorPalette>
+  {Object.entries(theme.brand).map(([key, value]) => {
+    return (
+      <ColorItem
+        key={key}
+        title={`theme.brand.${key}`}
+        subtitle={
+          <>
+            <code>{key}</code> colors
+          </>
+        }
+        colors={theme.brand[key]}
+      />
+    );
+  })}
+</ColorPalette>
