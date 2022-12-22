@@ -1,0 +1,44 @@
+{
+  "name": "@myorg/core",
+  "private": true,
+  "author": "Aaron Agarunov",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "dependencies": {
+    "@myorg/login": "workspace:*",
+    "@myorg/posts": "workspace:*",
+    "@myorg/shared": "workspace:*",
+    "@myorg/shell": "workspace:*",
+    "@sentry/react": "^7.24.2",
+    "@sentry/tracing": "^7.24.2",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "rollup-plugin-visualizer": "^5.8.3",
+    "vite-plugin-sentry": "^1.1.7"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "5.x",
+    "@mui/material": "5.x",
+    "@mui/styles": "5.x",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/react-router-dom": "*",
+    "@vitejs/plugin-react-swc": "3.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "react-router-dom": "5.x",
+    "typescript": "4.x",
+    "vite": "^4.0.0"
+  }
+}
