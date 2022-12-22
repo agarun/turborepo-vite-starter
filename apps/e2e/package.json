@@ -1,0 +1,20 @@
+{
+  "name": "@myorg/e2e",
+  "private": true,
+  "author": "Aaron Agarunov",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "e2e": "cypress run",
+    "e2e:open": "cypress open"
+  },
+  "devDependencies": {
+    "@testing-library/cypress": "^9.0.0",
+    "cypress": "^12.2.0"
+  },
+  "peerDependencies": {
+    "react": "18.x",
+    "react-dom": "18.x",
+    "react-router-dom": "5.x"
+  }
+}
