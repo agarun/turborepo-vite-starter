@@ -1,0 +1,43 @@
+{
+  "name": "@myorg/posts",
+  "version": "0.1.0",
+  "author": "Aaron Agarunov",
+  "type": "module",
+  "main": "dist/App.cjs",
+  "module": "dist/App.js",
+  "exports": {
+    ".": {
+      "development": "./src/App.jsx",
+      "require": "./dist/App.cjs",
+      "import": "./dist/App.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@myorg/posts-ui": "workspace:*",
+    "@myorg/shared": "workspace:*",
+    "@myorg/shell": "workspace:*"
+  },
+  "peerDependencies": {
+    "@mui/icons-material": "5.x",
+    "@mui/material": "5.x",
+    "@mui/styles": "5.x",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@vitejs/plugin-react-swc": "3.x",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "react-router-dom": "5.x",
+    "typescript": "4.x",
+    "vite": "4.x",
+    "vitest": "*"
+  }
+}
