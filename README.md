@@ -1,3 +1,5 @@
+Monorepo starter using Vite and Turborepo to create microfrontend React apps, libraries, docs, testing, tooling, and more.
+
 # Requirements
 
 Install [pnpm](https://pnpm.io/).
