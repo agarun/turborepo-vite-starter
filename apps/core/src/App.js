@@ -1,6 +1,6 @@
 import React from 'react';
 import { Baseline, Dashboard } from '@myorg/shell';
-import { theme } from '@mpath/shared';
+import { theme } from '@myorg/shared';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './provider';
