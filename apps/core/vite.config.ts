@@ -18,7 +18,7 @@ export default defineConfig({
           viteSentry({
             authToken: process.env.REACT_APP_SENTRY_TOKEN,
             url: process.env.REACT_APP_SENTRY,
-            org: 'msk',
+            org: 'myorg',
             project: 'myorg-client',
             release: '1.0',
             deploy: {
