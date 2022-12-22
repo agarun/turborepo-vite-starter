@@ -1,5 +1,6 @@
 import React from 'react';
 import { Baseline, Dashboard } from '@myorg/shell';
+import { theme } from '@mpath/shared';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './provider';
@@ -54,7 +55,7 @@ function App() {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
           {/* PWA primary color */}
-          {/* <meta name="theme-color" content={theme.palette.primary.main} /> */}
+          <meta name="theme-color" content={theme.palette.primary.main} />
         </Helmet>
         <BrowserRouter basename={process.env.BASE_URL || '/'}>
           <Apps />
