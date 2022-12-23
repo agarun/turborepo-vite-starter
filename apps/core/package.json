@@ -3,7 +3,7 @@
   "private": true,
   "author": "Aaron Agarunov",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "type": "module",
   "scripts": {
     "dev": "vite --port 3000",
