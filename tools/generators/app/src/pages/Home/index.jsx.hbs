@@ -1,0 +1,18 @@
+import Shell from '@mpath/shell';
+import { Box, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+
+function Home() {
+  return (
+    <Shell>
+      <Box p={2}>
+        <Typography>
+          This is the MPath {{titleCaseWithoutSpace name}} Homepage from <code>@mpath/{{name}}</code>.
+        </Typography>
+        <Link to="/">Click to go back home.</Link>
+      </Box>
+    </Shell>
+  );
+}
+
+export default Home;
