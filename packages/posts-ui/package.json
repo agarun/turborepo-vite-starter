@@ -33,7 +33,7 @@
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
-    "@vitejs/plugin-react": "3.x",
+    "@vitejs/plugin-react-swc": "3.x",
     "react": "18.x",
     "react-dom": "18.x",
     "react-router-dom": "5.x",
