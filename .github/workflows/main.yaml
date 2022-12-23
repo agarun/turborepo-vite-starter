@@ -128,7 +128,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact
+        uses: actions/download-artifact@v3
         with:
           name: ${{ github.event.repository.name }}.${{ github.ref_name }}.artifact
 
@@ -170,7 +170,7 @@ jobs:
         run: pnpm --filter "@myorg/e2e" install
 
       - name: Run Cypress tests
-        uses: cypress-io/github-action
+        uses: cypress-io/github-action@v5
         with:
           install: false
           start: pnpm start
