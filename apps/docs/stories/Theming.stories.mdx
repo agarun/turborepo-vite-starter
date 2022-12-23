@@ -1,6 +1,7 @@
 import { Meta, ColorPalette, ColorItem, Typeset } from '@storybook/blocks';
 import { theme } from '@myorg/shared';
 import { Baseline } from '@myorg/shell';
+import Stack from '@mui/material/Stack';
 
 <Meta title="Theming" />
 
@@ -114,3 +115,49 @@ We extend the [MUI default theme](https://mui.com/material-ui/customization/defa
     );
   })}
 </ColorPalette>
+
+## Typography
+
+**Font:** Inter
+
+**Weights:** _400(regular)_, 500(medium), 600(semibold), _700(bold)_
+
+<Stack direction="row" spacing={2} >
+  <Typeset
+    style={{ width: 400, margin: 0 }}
+    fontSizes={[
+      '12px',
+      '14px',
+      '16px',
+      '18px',
+      '22px',
+      '24px',
+      '28px',
+      '32px',
+      '48px',
+      '64px'
+    ]}
+    fontWeight={400}
+    sampleText={'Heading'}
+    fontFamily={theme.typography.fontFamily}
+  />
+
+  <Typeset
+    style={{ width: 400 }}
+    fontSizes={[
+      '12px',
+      '14px',
+      '16px',
+      '18px',
+      '22px',
+      '24px',
+      '28px',
+      '32px',
+      '48px',
+      '64px'
+    ]}
+    fontWeight={700}
+    sampleText={'Heading'}
+    fontFamily={theme.typography.fontFamily}
+  />
+</Stack>
