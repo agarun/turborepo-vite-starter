@@ -10,7 +10,7 @@
     "test": "vitest",
     "clean": "turbo run clean && rm -rf node_modules",
     "prepare": "husky install",
-    "lint-staged": "pnpm --recursive --workspace-concurrency=1 exec lint-staged",
+    "lint-staged": "pnpm --workspace-concurrency=1 exec lint-staged",
     "new-app": "pnpm exec plop app",
     "new-app-ts": "pnpm exec plop app-ts",
     "new-library": "pnpm exec plop library",
