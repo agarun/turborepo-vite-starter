@@ -17,6 +17,11 @@ export const decorators = [
 ];
 
 export const parameters = {
+  options: {
+    storySort: {
+      order: ['Introduction', 'Theming', '*']
+    }
+  },
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     expanded: true,
