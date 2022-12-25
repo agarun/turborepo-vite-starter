@@ -45,6 +45,7 @@ We use the following tools:
 - [React](https://reactjs.org/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Storybook](https://storybook.js.org/)
 - [Plop](https://github.com/plopjs/plop)
 - [Husky](https://github.com/typicode/husky)
 - [Vitest](https://github.com/vitest-dev/vitest)
