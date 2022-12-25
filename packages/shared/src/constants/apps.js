@@ -1,5 +1,5 @@
 import HelpIcon from '@mui/icons-material/Help'; // eslint-disable-line
-// ❗ Please do not modify the `// import HelpIcon...` line above.
+// ❗ Please do not modify the `import HelpIcon...` line above.
 // ❗ It is used by the app generator (`pnpm new-app`) to bootstrap new apps.
 
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
